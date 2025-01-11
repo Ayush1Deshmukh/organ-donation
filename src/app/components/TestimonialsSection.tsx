@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: 'Sarah Johnson',
     role: 'Organ Recipient',
-    image: '/testimonial-1.jpg',
+    image: 'feedback.png',
     quote: 'Thanks to this platform, I received a life-saving kidney transplant. The transparency and efficiency of the process gave me peace of mind during a challenging time.',
   },
   {
     name: 'Michael Chen',
     role: 'Organ Donor',
-    image: '/testimonial-2.jpg',
+    image: 'feedback.png',
     quote: 'As a donor, I appreciate how this platform ensures my privacy while allowing me to make a meaningful impact. The blockchain technology adds an extra layer of trust to the process.',
   },
   {
     name: 'Dr. Emily Rodriguez',
     role: 'Transplant Surgeon',
-    image: '/testimonial-3.jpg',
+    image: 'feedback.png',
     quote: 'This Web3 platform has revolutionized how we manage organ donations. The real-time updates and secure data sharing have significantly improved our ability to save lives.',
   },
 ]

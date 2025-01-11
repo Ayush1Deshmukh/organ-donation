@@ -44,7 +44,7 @@ export default function HeroSection() {
 
             <div className="relative lg:h-[500px]">
               <img
-                src="image.png"
+                src="hero.png"
                 alt="Medical team performing surgery"
                 className="rounded-2xl shadow-xl w-full h-full object-cover"
               />
