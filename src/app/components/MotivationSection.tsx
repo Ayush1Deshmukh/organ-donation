@@ -1,91 +1,113 @@
+import React from 'react';
+import { Shield, Clock, Heart, Users, ChartBar, PhoneCall } from 'lucide-react';
+
 export default function MotivationSection() {
   return (
-    <div className="py-12 bg-white">
+    <div className="py-16 bg-gradient-to-b from-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Motivation</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Why Web3 for Organ Donation?
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Blockchain technology ensures transparency, security, and fairness in the organ donation process.
+        <div className="text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 mb-6">
+            <Heart className="w-4 h-4 mr-2" />
+            <span className="text-sm font-medium">Why Choose Us</span>
+          </div>
+          
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+            Making Organ Donation
+            <span className="block text-blue-700 mt-2">Safe and Accessible</span>
+          </h2>
+          
+          <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+            Our advanced digital registry system ensures a transparent, secure, and 
+            efficient organ donation process, connecting donors with recipients seamlessly.
           </p>
         </div>
 
-        <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Increased Transparency</p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Blockchain provides an immutable record of all transactions, ensuring complete transparency in the organ donation process.
-              </dd>
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Patient Safety Card */}
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+              <Shield className="w-6 h-6 text-green-600" />
             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Patient Safety First</h3>
+            <p className="text-gray-600">
+              Our system maintains the highest medical standards with strict verification 
+              protocols and comprehensive health screening processes.
+            </p>
+          </div>
 
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Enhanced Security</p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Decentralized systems provide robust security measures, protecting sensitive medical information and donor data.
-              </dd>
+          {/* Quick Matching Card */}
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+              <ChartBar className="w-6 h-6 text-blue-600" />
             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced Matching</h3>
+            <p className="text-gray-600">
+              Our intelligent matching system considers multiple medical criteria to ensure 
+              the best possible donor-recipient compatibility.
+            </p>
+          </div>
 
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Fair Allocation</p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Smart contracts ensure fair and unbiased allocation of organs based on predefined criteria and medical urgency.
-              </dd>
+          {/* 24/7 Support Card */}
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+              <PhoneCall className="w-6 h-6 text-purple-600" />
             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">24/7 Medical Support</h3>
+            <p className="text-gray-600">
+              Our dedicated medical team is available around the clock to provide 
+              assistance and answer any questions you may have.
+            </p>
+          </div>
 
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">Real-time Updates</p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Blockchain technology enables real-time tracking and updates of organ availability and transplant status.
-              </dd>
+          {/* Real-time Updates Card */}
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+              <Clock className="w-6 h-6 text-yellow-600" />
             </div>
-          </dl>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Updates</h3>
+            <p className="text-gray-600">
+              Stay informed with instant notifications about matching opportunities 
+              and procedure status updates through our secure platform.
+            </p>
+          </div>
+
+          {/* Nationwide Network Card */}
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+              <Users className="w-6 h-6 text-red-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Nationwide Network</h3>
+            <p className="text-gray-600">
+              Connect with leading transplant centers and medical professionals 
+              across the country through our extensive healthcare network.
+            </p>
+          </div>
+
+          {/* Secure Records Card */}
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+              <Shield className="w-6 h-6 text-indigo-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Records</h3>
+            <p className="text-gray-600">
+              Your medical information is protected with state-of-the-art security 
+              measures, ensuring complete confidentiality and privacy.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-10 lg:mt-20 lg:text-center">
-          <h3 className="text-2xl font-extrabold text-gray-900">Learn More About Web3 in Organ Donation</h3>
-          <div className="mt-8 aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+        <div className="mt-16 text-center">
+          <div className="inline-flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+              <Heart className="w-5 h-5 mr-2" />
+              Become a Donor
+            </button>
+            <button className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors">
+              Contact Our Team
+            </button>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

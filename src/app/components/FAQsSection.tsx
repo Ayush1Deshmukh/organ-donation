@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqs = [
   {
@@ -22,43 +22,49 @@ const faqs = [
   },
   {
     question: 'How can I track the status of my donation or transplant?',
-    answer: 'Once registered, you\'ll have access to a secure dashboard where you can view real-time updates on your donation or transplant status. You\'ll receive notifications at each stage of the process, from matching to final transplantation.',
+    answer: "Once registered, you'll have access to a secure dashboard where you can view real-time updates on your donation or transplant status. You'll receive notifications at each stage of the process, from matching to final transplantation.",
   },
-]
+];
 
 export default function FAQsSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
-    <div className="bg-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
-        <div className="space-y-6">
+    <div className="bg-blue-50 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-blue-900 text-center mb-12">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-8">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200 pb-6">
+            <div
+              key={index}
+              className="bg-white border border-blue-200 shadow-md rounded-lg p-6"
+            >
               <button
                 className="flex justify-between items-center w-full text-left"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+                <span className="text-lg font-medium text-blue-800">
+                  {faq.question}
+                </span>
                 {openIndex === index ? (
-                  <ChevronUp className="h-6 w-6 text-gray-500" />
+                  <ChevronUp className="h-6 w-6 text-blue-600" />
                 ) : (
-                  <ChevronDown className="h-6 w-6 text-gray-500" />
+                  <ChevronDown className="h-6 w-6 text-blue-600" />
                 )}
               </button>
               {openIndex === index && (
-                <p className="mt-2 text-gray-600">{faq.answer}</p>
+                <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
               )}
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
-

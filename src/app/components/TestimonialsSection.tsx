@@ -55,33 +55,31 @@ export default function TestimonialsSection() {
   }, [])
 
   return (
-    <div ref={containerRef} className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div ref={containerRef} className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">What People Are Saying</h2>
+        <h2 className="text-4xl font-extrabold text-blue-900 text-center mb-12">
+          Trusted by Patients, Donors, and Medical Professionals
+        </h2>
         <div className="relative">
-          <div className="flex overflow-hidden">
+          <div className="flex overflow-hidden items-center">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`w-full flex-shrink-0 transition-all duration-500 ease-in-out ${
-                  index === currentTestimonial ? 'opacity-100' : 'opacity-0'
+                className={`w-full flex-shrink-0 transition-transform duration-500 ease-in-out ${
+                  index === currentTestimonial ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
                 style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
               >
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-                  <div className="px-6 py-8 sm:p-10 sm:pb-6">
-                    <div className="flex items-center space-x-4">
-                      <img
-                        className="w-16 h-16 rounded-full object-cover"
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                      />
-                      <div>
-                        <h3 className="text-lg font-medium text-gray-900">{testimonial.name}</h3>
-                        <p className="text-sm text-gray-500">{testimonial.role}</p>
-                      </div>
-                    </div>
-                    <p className="mt-4 text-base text-gray-600">"{testimonial.quote}"</p>
+                <div className="flex flex-col lg:flex-row bg-gray-50 shadow-lg rounded-lg p-8">
+                  <img
+                    className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0"
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                  />
+                  <div className="mt-6 lg:mt-0 lg:ml-8">
+                    <h3 className="text-2xl font-semibold text-blue-900">{testimonial.name}</h3>
+                    <p className="text-sm text-gray-600 mb-4">{testimonial.role}</p>
+                    <p className="text-lg text-gray-700">"{testimonial.quote}"</p>
                   </div>
                 </div>
               </div>
@@ -89,19 +87,18 @@ export default function TestimonialsSection() {
           </div>
           <button
             onClick={prevTestimonial}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+            className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-blue-100 hover:bg-blue-200 text-blue-800 rounded-full p-3 shadow-md"
           >
-            <ChevronLeft className="h-6 w-6 text-gray-600" />
+            <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+            className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-blue-100 hover:bg-blue-200 text-blue-800 rounded-full p-3 shadow-md"
           >
-            <ChevronRight className="h-6 w-6 text-gray-600" />
+            <ChevronRight className="h-6 w-6" />
           </button>
         </div>
       </div>
     </div>
   )
 }
-

@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 flex justify-between items-center">
-          <p className="text-sm text-gray-400">&copy; 2023 Web3 Organ Donation Platform. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; 2025 WeCare. All rights reserved.</p>
           <p className="text-sm text-gray-400">Powered by Blockchain Technology</p>
         </div>
       </div>
