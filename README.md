@@ -67,9 +67,3 @@ Now that everything is set-up, you can run the server.
 2. Open a browser and go to http://localhost:8080/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Team Members
-
-* [Dhatchana Moorthi AP](https://github.com/Dhatchanamoorthi8)
-* [SubashChandran P](https://github.com/subash037)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
