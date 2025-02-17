@@ -1,5 +1,4 @@
 # OrganDonation-Using-Block-Chain
-Organ Donation Management Using Block Chain Technology
 
 # SYSTEM DIAGRAM
 ![diagram_page-0002](https://github.com/Dhatchanamoorthi8/OrganDonation-Using-Block-Chain/assets/111693185/f4b01c64-767c-44e2-a1bf-96ba6a5347a7)
@@ -67,3 +66,9 @@ Now that everything is set-up, you can run the server.
 2. Open a browser and go to http://localhost:8080/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Team Members
+
+* [Dhatchana Moorthi AP](https://github.com/Dhatchanamoorthi8)
+* [SubashChandran P](https://github.com/subash037)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
