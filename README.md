@@ -31,7 +31,7 @@ Install Gitbash from https://gitforwindows.org/
 1. Open gitbash or terminal.
 2. Clone the repo.
    ```sh
-   git clone https://github.com/Dhatchanamoorthi8/OrganDonation-Using-Block-Chain.git
+   git clone https://github.com/raghav3615/organdonation
    ```
 3. Traverse into the app folder.
    ```sh
@@ -64,11 +64,4 @@ Now that everything is set-up, you can run the server.
    npm run dev
    ```
 2. Open a browser and go to http://localhost:8080/
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Team Members
-
-* [Dhatchana Moorthi AP](https://github.com/Dhatchanamoorthi8)
-* [SubashChandran P](https://github.com/subash037)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
